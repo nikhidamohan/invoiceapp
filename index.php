@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <script>
     function applyDiscount(total) {
-  
+      //function to apply discount
       let perce=0;
       var type = document.getElementsByName('percent');
       var discount = document.getElementById("discount").value;
@@ -32,12 +32,12 @@
   </script>
 </head>
 <body>
-<!-- <button  class="btn btn-info btn-lg button" data-toggle="modal" data-target="#myModal">
-Add Item</button> -->
+
 
 <div class="listpage">
   <a href="action.php">
   <button  class="btn btn-info btn-lg button mb-10">Add Item</button></a>
+  
   <table id="customers">
     <?php
     include './mysql.php';
@@ -46,6 +46,7 @@ Add Item</button> -->
 
     function get_percentage($total, $number)
     {
+      //function to calculate the percentage value
       if ( $total > 0 ) 
       {
        return round($number * ($total / 100),2);
