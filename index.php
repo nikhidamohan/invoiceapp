@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <script>
     function applyDiscount(total) {
-       var res = "success";
-
+  
       let perce=0;
       var type = document.getElementsByName('percent');
       var discount = document.getElementById("discount").value;
@@ -29,7 +28,7 @@
       }
       
   }
-  
+
   </script>
 </head>
 <body>
@@ -281,10 +280,9 @@ Add Item</button> -->
 
         if($_GET["pdf"])
         {          
-            $pdf->writeHTML($tbl, true, false, false, false, '');
-          
+            $pdf->writeHTML($tbl, true, false, false, false, '');         
             ob_end_clean();
-            $pdf->Output('example_048.pdf', 'I');
+            $pdf->Output('invoice.pdf', 'I');
             
         }
   
